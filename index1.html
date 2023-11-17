@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h1>RandomTrip</h1>
+    <section>
+
+
+    </section>
+</header>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Avaliar</a>
+</nav>
+
+<body>
+    <main>
+        <section>
+            <article>
+                <div id="caixa">
+                    <div id="video">
+                        <iframe width="460" height="315"
+                            src="https://www.youtube.com/embed/RqQ_1CMVUL0?si=nxy4Seg58DIML3JB?autoplay=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div id="descubra">
+                        <p>Descubra qual será sua próxima viagem.</p>
+                    </div>
+                </div>
+                <div class="earth"><button id="botao" class="botao">G</button></div>
+            </article>
+        </section>
+
+
+            
+            <script>
+                const slider = document.getElementById('slider');
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+                let currentIndex = 0;
+        
+                // Função para ir para o próximo slide
+                function nextSlide() {
+                    currentIndex++;
+                    if (currentIndex === slider.children.length) {
+                        currentIndex = 0;
+                    }
+                    updateSlider();
+                }
+        
+                // Função para ir para o slide anterior
+                function prevSlide() {
+                    currentIndex--;
+                    if (currentIndex < 0) {
+                        currentIndex = slider.children.length - 1;
+                    }
+                    updateSlider();
+                }
+        
+                // Atualiza o slider para mostrar o slide atual
+                function updateSlider() {
+                    const translateX = -currentIndex * 100;
+                    slider.style.transform = `translateX(${translateX}%)`;
+                }
+        
+                // Adiciona eventos aos botões de navegação
+                nextBtn.addEventListener('click', nextSlide);
+                prevBtn.addEventListener('click', prevSlide);
+
+                //BOTÃO ALEATÓRIO **********************************************
+
+                document.getElementById('botao').addEventListener('click', function() {
+                var paginas = ['países/italia.html', 'países/franca.html', 'países/tanzania.html', 'países/jamaica.html',]; // Substitua com os nomes das suas páginas
+                var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+                window.location.href = paginaAleatoria;
+                });
+            </script>
+    </main>
+
+
+
+</body>
+
+</html>

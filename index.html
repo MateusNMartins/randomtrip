@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/globo.png" type="image/x-icon">
+    <title>RandomTrip</title>
+</head>
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .video-container {
+        margin-top: 10px;
+        position: relative;
+        height: 130vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    .content {
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        font-size: 2em;
+        font-family: 'evogria', sans-serif;
+        height: 100%;
+        position: relative;
+    }
+
+    .content>h1 {
+        text-decoration: underline 10px;
+    }
+
+    .content>h2 {
+        top: 20%;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        text-decoration: underline 10px;
+
+    }
+
+    .imagem {
+        position: absolute;
+        transition: all 1s;
+        width: 10%;
+    }
+
+
+    .imagem:hover {
+        scale: 1.8;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+
+
+    @media only screen and (min-width: 1200px) {
+        #america-norte {
+            top: 312px;
+            left: 23%;
+            width: 25%;
+        }
+
+        #america-sul {
+            top: 509px;
+            left: 33%;
+            width: 11%;
+        }
+
+
+        #asia {
+            top: 340.5px;
+            left: 58%;
+            width: 21%;
+        }
+
+
+        #africa {
+            top: 480px;
+            left: 50.4%;
+            width: 12%;
+        }
+
+        #oceania {
+            top: 541px;
+            left: 71.5%;
+            width: 11%;
+        }
+
+        #europa {
+            top: 344px;
+            left: 50%;
+            width: 13%;
+
+        }
+    }
+</style>
+
+
+<body>
+    <header>
+        <h1>RandomTrip</h1>
+        <section>
+
+
+        </section>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="videos/video-mapa.mp4" type="video/mp4">
+            <!-- Adicione outros formatos de vídeo aqui se necessário -->
+        </video>
+        <div class="content">
+            <!-- Conteúdo que ficará sobre o vídeo -->
+            <h1>Descubra qual sua próxima viagem!!</h1>
+            <h2>Escolha o continente</h2>
+
+
+            <img class="imagem" id="america-norte" src="america-norte.svg" alt="" onmouseover="blurImages(this)"
+                onmouseout="unblurImages(this)">
+            <img class="imagem" id="africa" src="africa.svg" alt="" onmouseover="blurImages(this)"
+                onmouseout="unblurImages(this)">
+            <img class="imagem" id="america-sul" src="america-sul.svg" alt="" onmouseover="blurImages(this)"
+                onmouseout="unblurImages(this)">
+            <img class="imagem" id="asia" src="asia.svg" alt="" onmouseover="blurImages(this)"
+                onmouseout="unblurImages(this)">
+            <img class="imagem" id="europa" src="europa.svg" alt="" onmouseover="blurImages(this)"
+                onmouseout="unblurImages(this)">
+            <img class="imagem" id="oceania" src="oceania.svg" alt="" onmouseover="blurImages(this)"
+                onmouseout="unblurImages(this)">
+
+
+            <!-- <div class="earth"><button id="botao" class="botao">G</button></div> -->
+        </div>
+    </div>
+
+    <footer>
+        <p id="descricao-rodape"><span id="logo-rodape">RandomTrip</span> | Explore Destinos Surpreendentes</p> <br>
+        <p>Política de Privacidade | Termos de Serviço
+            Copyright © 2023 RandomTrip. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script>
+        //BOTÃO ALEATÓRIO *******************************
+        document.getElementById('america-norte').addEventListener('click', function () {
+            var paginas = ['países/usa.html', 'países/jamaica.html']; // Substitua com os nomes das suas páginas
+            var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+            window.location.href = paginaAleatoria;
+        });
+
+        document.getElementById('america-sul').addEventListener('click', function () {
+            var paginas = ['países/argentina.html', 'países/brasil.html']; // Substitua com os nomes das suas páginas
+            var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+            window.location.href = paginaAleatoria;
+        });
+
+        document.getElementById('oceania').addEventListener('click', function () {
+            var paginas = ['países/salomao.html', 'países/nova-zelandia.html']; // Substitua com os nomes das suas páginas
+            var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+            window.location.href = paginaAleatoria;
+        });
+
+        document.getElementById('europa').addEventListener('click', function () {
+            var paginas = ['países/italia.html', 'países/franca.html']; // Substitua com os nomes das suas páginas
+            var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+            window.location.href = paginaAleatoria;
+        });
+
+        document.getElementById('africa').addEventListener('click', function () {
+            var paginas = ['países/tanzania.html','países/africa-sul.html']; // Substitua com os nomes das suas páginas
+            var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+            window.location.href = paginaAleatoria;
+        });
+
+        document.getElementById('asia').addEventListener('click', function () {
+            var paginas = ['países/china.html', 'países/japao.html',]; // Substitua com os nomes das suas páginas
+            var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+            window.location.href = paginaAleatoria;
+        });
+        //******************************************************
+
+        //******************* IMAGEM DESFOCADA **********************************
+
+        function blurImages(image) {
+            const imagens = document.querySelectorAll('img');
+            imagens.forEach(function (imagem) {
+                if (imagem !== image) {
+                    imagem.style.filter = 'blur(5px)';
+                }
+            });
+        }
+
+        function unblurImages() {
+            const imagens = document.querySelectorAll('img');
+            imagens.forEach(function (imagem) {
+                imagem.style.filter = 'none';
+            });
+        }
+
+    </script>
+</body>
+
+</html>
