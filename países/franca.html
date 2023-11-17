@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../imagens/globo.png" type="image/x-icon">
+    <title>França</title>
+</head>
+<style>
+
+section#boas-vindas-logo {
+    background-image: url(../imagens/frança.png);
+}
+    #caixa-1>h2 {
+        background-image: linear-gradient(to right, rgba(0, 0, 255, 0.61), rgb(255, 255, 255), rgba(255, 0, 0, 0.61));
+      }
+    
+      #caixa-2>h2 {
+        background-image: linear-gradient(to right, rgba(0, 0, 255, 0.61), rgb(255, 255, 255), rgba(255, 0, 0, 0.61));
+      }
+    
+      h2 {
+        background-image: linear-gradient(to right, rgba(0, 0, 255, 0.61), white, rgba(255, 0, 0, 0.61));
+      }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Avança para o próximo slide a cada 3 segundos
+});
+
+</script>
+<header>
+    <nav>
+        <h1>RandomTrip</h1>
+        <a href="../index.html">home</a>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <section id="boas-vindas-logo">
+            <br>
+            <br>
+            <br>
+            <h1>França</h1>
+        </section>
+        
+        <div class="bandeira"><img src="../icons/franca.png" alt="" id="bandeira-logo"></div>
+        
+        <section id="informacao">
+            <div id="boas-vindas">
+                <br>
+                <h1>Boas-vindas à França</h1>
+            </div>
+            <div id="caixa-lista">
+                <div id="caixa-1">
+                    <h2>Localização Geográfica</h2>
+                    <img src="../icons/localizacao.png" alt="localizacao" class="icons">
+                    <p>A França está localizada na Europa Ocidental, fazendo fronteira com Bélgica, Luxemburgo,
+                        Alemanha, Suíça, Itália, Mônaco, Espanha e Andorra.</p>
+                    <br><br><br><br><br>
+                    <h2>Geográfia</h2>
+                    <img src="../icons/geografia.png" alt="geografia" class="icons">
+                    <p>A França possui uma grande diversidade geográfica, incluindo montanhas (os Alpes), planícies (a
+                        Bacia de Paris) e litoral mediterrâneo.</p>
+                    <br><br><br><br><br>
+                    <h2>Pratos Típicos</h2>
+                    <img src="../icons/comida.png" alt="comida" class="icons">
+                    <p>Croissant, Coq au Vin, Ratatouille, Crème Brûlée.</p>
+                    <br><br><br><br><br>
+                    <h2>Futebol</h2>
+                    <img src="../icons/bola.png" alt="bola" class="icons">
+                    <p>A França tem uma liga de futebol (Ligue 1) e uma seleção nacional de renome.</p>
+
+                </div>
+                <div id="caixa-2">
+                    <h2>Dados Demográficos</h2>
+                    <img src="../icons/pessoas.png" alt="pessoas" class="icons">
+                    <p>População de aproximadamente 67 milhões de habitantes.</p>
+                    <br><br><br><br><br>
+                    <h2>Clima</h2>
+                    <img src="../icons/clima.png" alt="clima" class="icons">
+                    <p>Varia de um clima oceânico no oeste a um clima mediterrâneo no sul.</p>
+                    <br><br><br><br><br>
+                    <h2>Setores Industriais</h2>
+                    <img src="../icons/fabrica.png" alt="fabrica" class="icons">
+                    <p>Moda de alta costura, vinho, indústria automobilística.</p>
+                    <br><br><br><br><br>
+                    <h2>Sustentabilidade</h2>
+                    <img src="../icons/sustentabilidade.png" alt="sustentabilidade" class="icons">
+                    <p>Investimentos em energia renovável e conservação ambiental.</p>
+                </div>
+            </div>
+
+            <h2>Pontos Turísticos</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <h3>A Torre Eiffel</h3>
+                        <img src="img-franca/toore.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>O Arco do Triunfo</h3>
+                        <img src="img-franca/arco.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>A Catedral de Notre-Dame</h3>
+                        <img src="img-franca/catedral.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>O Museu do Louvre</h3>
+                        <img src="img-franca/louvre.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>O Palácio de Versalhes</h3>
+                        <img src="img-franca/palacio.jpg" alt="Imagem 1">
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p id="descricao-rodape"><span id="logo-rodape">RandomTrip</span> | Explore Destinos Surpreendentes</p> <br>
+                <p>Política de Privacidade | Termos de Serviço
+                Copyright © 2023 RandomTrip. Todos os direitos reservados.</p>
+            </footer>
+        
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../imagens/globo.png" type="image/x-icon">
+    <title></title>
+</head>
+<style>
+
+section#boas-vindas-logo {
+    background-image: url(img-china/china.png);
+}
+
+#boas-vindas-logo > h1 {
+    color: white;
+}
+
+  #caixa-1>h2 {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.815), rgb(241, 225, 0), rgba(255, 0, 0, 0.815)60%);
+  }
+
+  #caixa-2>h2 {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.815), rgb(241, 225, 0), rgba(255, 0, 0, 0.815)60%);
+  }
+
+  h2 {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.815), rgb(241, 225, 0), rgba(255, 0, 0, 0.815)60%);
+  }
+
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Avança para o próximo slide a cada 3 segundos
+});
+
+</script>
+<header>
+    <nav>
+        <h1>RandomTrip</h1>
+        <a href="../index.html">home</a>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <section id="boas-vindas-logo">
+            <br>
+            <br>
+            <br>
+            <h1>China</h1>
+        </section>
+
+        <div class="bandeira"><img src="../icons/china.png" alt="" id="bandeira-logo"></div>
+
+        <section id="informacao">
+            <div id="boas-vindas">
+                <br>
+                <h1>Boas-vindas à China</h1>
+            </div>
+            <div id="caixa-lista">
+                <div id="caixa-1">
+                    <h2>Localização Geográfica</h2>
+                    <img src="../icons/localizacao.png" alt="localizacao" class="icons">
+                    <p>Ásia Oriental, com fronteiras com 14 países.</p>
+                    <br><br><br><br><br>
+                    <h2>Geográfia</h2>
+                    <img src="../icons/geografia.png" alt="geografia" class="icons">
+                    <p>Montanhas, Planícies e o Rio Yangtzé.</p>
+                    <br><br><br><br><br>
+                    <h2>Pratos Típicos</h2>
+                    <img src="../icons/comida.png" alt="comida" class="icons">
+                    <p>Pato à Pequim, Jiaozi, Dim Sum.</p>
+                    <br><br><br><br><br>
+                    <h2>Futebol</h2>
+                    <img src="../icons/bola.png" alt="bola" class="icons">
+                    <p>Crescimento e Investimentos, Super Liga Chinesa, Seleção Nacional, Desenvolvimento de Talentos.</p>
+
+                </div>
+                <div id="caixa-2">
+                    <h2>Dados Demográficos</h2>
+                    <img src="../icons/pessoas.png" alt="pessoas" class="icons">
+                    <p>População de mais de 1.4 bilhão de habitantes.</p>
+                    <br><br><br><br><br>
+                    <h2>Clima</h2>
+                    <img src="../icons/clima.png" alt="clima" class="icons">
+                    <p>Variado, desde Subtropical a Subártico.</p>
+                    <br><br><br><br><br>
+                    <h2>Setores Industriais</h2>
+                    <img src="../icons/fabrica.png" alt="fabrica" class="icons">
+                    <p>Tecnologia e Manufatura: Crescimento e Inovação.</p>
+                    <br><br><br><br><br>
+                    <h2>Sustentabilidade</h2>
+                    <img src="../icons/sustentabilidade.png" alt="sustentabilidade" class="icons">
+                    <p>Energia Limpa: Investimentos em Fontes Renováveis.</p>
+                </div>
+            </div>
+
+            <h2>Pontos Turísticos</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <h3>O Buda Gigante de Leshan - Leshan</h3>
+                        <img src="img-china/buda.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>O Templo do Céu - Pequim</h3>
+                        <img src="img-china/ceu.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>O Exército de Terracota - Xi'an</h3>
+                        <img src="img-china/exercito.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>A Grande Muralha da China - Pequim</h3>
+                        <img src="img-china/muralha.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Os Jardins Clássicos de Suzhou - Suzhou</h3>
+                        <img src="img-china/jardins.png" alt="Imagem 1">
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p id="descricao-rodape"><span id="logo-rodape">RandomTrip</span> | Explore Destinos Surpreendentes</p> <br>
+                <p>Política de Privacidade | Termos de Serviço
+                Copyright © 2023 RandomTrip. Todos os direitos reservados.</p>
+            </footer>
+        
+        </section>
+    </main>
+</body>
+
+</html>

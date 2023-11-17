@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../imagens/globo.png" type="image/x-icon">
+    <title></title>
+</head>
+<style>
+
+section#boas-vindas-logo {
+    background-image: url(img-brasil.html/brasil.png);
+}
+
+  #caixa-1>h2 {
+    background-image: linear-gradient(to right, rgba(0, 255, 34, 0.61),rgba(238, 255, 0, 0.61),rgba(4, 0, 255, 0.61), rgb(255, 255, 255),rgba(238, 255, 0, 0.61), rgba(0, 255, 34, 0.61));
+    color: white;
+
+  }
+
+  #boas-vindas-logo > h1 {
+      color: white;
+  }
+
+  #caixa-2>h2 {
+    background-image: linear-gradient(to right, rgba(0, 255, 34, 0.61),rgba(238, 255, 0, 0.61),rgba(4, 0, 255, 0.61), rgb(255, 255, 255),rgba(238, 255, 0, 0.61), rgba(0, 255, 34, 0.61));  
+    color: white;
+}
+
+  h2 {
+    background-image: linear-gradient(to right, rgba(0, 255, 34, 0.61),rgba(238, 255, 0, 0.61),rgba(4, 0, 255, 0.61), rgb(255, 255, 255),rgba(238, 255, 0, 0.61), rgba(0, 255, 34, 0.61));  
+    color: white;
+
+}
+
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Avança para o próximo slide a cada 3 segundos
+});
+
+</script>
+<header>
+    <nav>
+        <h1>RandomTrip</h1>
+        <a href="../index.html">home</a>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <section id="boas-vindas-logo">
+            <br>
+            <br>
+            <br>
+            <h1>Brasil</h1>
+        </section>
+
+        <div class="bandeira"><img src="../icons/brazil (1).png" alt="" id="bandeira-logo"></div>
+
+        <section id="informacao">
+            <div id="boas-vindas">
+                <br>
+                <h1>Boas-vindas ao Brasil</h1>
+            </div>
+            <div id="caixa-lista">
+                <div id="caixa-1">
+                    <h2>Localização Geográfica</h2>
+                    <img src="../icons/localizacao.png" alt="localizacao" class="icons">
+                    <p>América do Sul, fazendo fronteira com todos os países sul-americanos, exceto Chile e Equador.</p>
+                    <br><br><br><br><br>
+                    <h2>Geográfia</h2>
+                    <img src="../icons/geografia.png" alt="geografia" class="icons">
+                    <p>Floresta Amazônica, Pantanal, Serras e Planaltos.</p>
+                    <br><br><br><br><br>
+                    <h2>Pratos Típicos</h2>
+                    <img src="../icons/comida.png" alt="comida" class="icons">
+                    <p>Feijoada, Acarajé, Churrasco, Brigadeiro.</p>
+                    <br><br><br><br><br>
+                    <h2>Futebol</h2>
+                    <img src="../icons/bola.png" alt="bola" class="icons">
+                    <p> Campeonato Brasileiro, Seleção Nacional, Clubes Notáveis, Copa Libertadores, Desenvolvimento de Talentos.</p>
+                </div>
+                <div id="caixa-2">
+                    <h2>Dados Demográficos</h2>
+                    <img src="../icons/pessoas.png" alt="pessoas" class="icons">
+                    <p>População de aproximadamente 213 milhões de habitantes.</p>
+                    <br><br><br><br><br>
+                    <h2>Clima</h2>
+                    <img src="../icons/clima.png" alt="clima" class="icons">
+                    <p>Tropical, Subtropical e Equatorial em diferentes regiões.</p>
+                    <br><br><br><br><br>
+                    <h2>Setores Industriais</h2>
+                    <img src="../icons/fabrica.png" alt="fabrica" class="icons">
+                    <p>Agricultura (Soja, Café), Indústria Automotiva, Tecnologia.</p>
+                    <br><br><br><br><br>
+                    <h2>Sustentabilidade</h2>
+                    <img src="../icons/sustentabilidade.png" alt="sustentabilidade" class="icons">
+                    <p>Preservação da Amazônia: Desafios e Iniciativas de Conservação.</p>
+                </div>
+            </div>
+
+            <h2>Pontos Turísticos</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <h3>Cristo Redentor - Rio de Janeiro, RJ</h3>
+                        <img src="img-brasil.html/cristo.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Pão de Açúcar - Rio de Janeiro, RJ</h3>
+                        <img src="img-brasil.html/pao.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Iguazu Falls - Foz do Iguaçu, PR</h3>
+                        <img src="img-brasil.html/foz.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Pelourinho - Salvador, BA</h3>
+                        <img src="img-brasil.html/pelourinho.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Fernando de Noronha - Estado de Pernambuco</h3>
+                        <img src="img-brasil.html/fernando.jpg" alt="Imagem 1">
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p id="descricao-rodape"><span id="logo-rodape">RandomTrip</span> | Explore Destinos Surpreendentes</p> <br>
+                <p>Política de Privacidade | Termos de Serviço
+                Copyright © 2023 RandomTrip. Todos os direitos reservados.</p>
+            </footer>
+        
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../imagens/globo.png" type="image/x-icon">
+    <title>África do Sul</title>
+</head>
+<style>
+
+section#boas-vindas-logo {
+    background-image: url(img-africa-sul/africa.png);
+}
+#boas-vindas-logo > h1 {
+    color: white;
+}
+
+
+  #caixa-1>h2 {
+    background-image: linear-gradient(to right, rgba(251, 255, 0, 0.61), rgba(255, 255, 255, 0.808),rgba(13, 153, 0, 0.863), rgba(255, 0, 0, 0.61),rgba(0, 4, 255, 0.61));
+    color: white;
+  }
+
+  #caixa-2>h2 {
+    background-image: linear-gradient(to right, rgba(251, 255, 0, 0.61), rgba(255, 255, 255, 0.808),rgba(13, 153, 0, 0.863), rgba(255, 0, 0, 0.61),rgba(0, 4, 255, 0.61));
+    color: white;
+  }
+
+  h2 {
+    background-image: linear-gradient(to right, rgba(251, 255, 0, 0.61), rgba(255, 255, 255, 0.808),rgba(13, 153, 0, 0.863), rgba(255, 0, 0, 0.61),rgba(0, 4, 255, 0.61));
+    color: white;
+  }
+
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Avança para o próximo slide a cada 3 segundos
+});
+
+</script>
+<header>
+    <nav>
+        <h1>RandomTrip</h1>
+        <a href="../index.html">home</a>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <section id="boas-vindas-logo">
+            <br>
+            <br>
+            <br>
+            <h1>África do Sul</h1>
+        </section>
+
+        <div class="bandeira"><img src="../países/img-africa-sul/africa-do-sul.png" alt="" id="bandeira-logo"></div>
+
+        <section id="informacao">
+            <div id="boas-vindas">
+                <br>
+                <h1>Boas-vindas à África do Sul </h1>
+            </div>
+            <div id="caixa-lista">
+                <div id="caixa-1">
+                    <h2>Localização Geográfica</h2>
+                    <img src="../icons/localizacao.png" alt="localizacao" class="icons">
+                    <p>Extremo sul do continente africano.</p>
+                    <br><br><br><br><br>
+                    <h2>Geográfia</h2>
+                    <img src="../icons/geografia.png" alt="geografia" class="icons">
+                    <p>Planaltos, Montanhas e uma Costa Extensa.</p>
+                    <br><br><br><br><br>
+                    <h2>Pratos Típicos</h2>
+                    <img src="../icons/comida.png" alt="comida" class="icons">
+                    <p>Bobotie, Boerewors, Biltong.</p>
+                    <br><br><br><br><br>
+                    <h2>Futebol</h2>
+                    <img src="../icons/bola.png" alt="bola" class="icons">
+                    <p>Futebol na África do Sul: A Premier Soccer League (PSL) é a liga nacional vibrante, os "Bafana Bafana"</p>
+
+                </div>
+                <div id="caixa-2">
+                    <h2>Dados Demográficos</h2>
+                    <img src="../icons/pessoas.png" alt="pessoas" class="icons">
+                    <p>População de aproximadamente 60 milhões de habitantes.</p>
+                    <br><br><br><br><br>
+                    <h2>Clima</h2>
+                    <img src="../icons/clima.png" alt="clima" class="icons">
+                    <p>Varia de Mediterrâneo a Semiárido.</p>
+                    <br><br><br><br><br>
+                    <h2>Setores Industriais</h2>
+                    <img src="../icons/fabrica.png" alt="fabrica" class="icons">
+                    <p>Mineração, Agricultura e Turismo.</p>
+                    <br><br><br><br><br>
+                    <h2>Sustentabilidade</h2>
+                    <img src="../icons/sustentabilidade.png" alt="sustentabilidade" class="icons">
+                    <p>Energias Renováveis: Investimentos em Fontes Limpas.</p>
+                </div>
+            </div>
+
+            <h2>Pontos Turísticos</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <h3>Blyde River Canyon Nature Reserve - Mpumalanga</h3>
+                        <img src="img-africa-sul/Blyde River Canyon Nature Reserve - Mpumalanga.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Cavernas Cango - Oudtshoorn, Cabo Ocidental</h3>
+                        <img src="img-africa-sul/Cavernas Cango - Oudtshoorn, Cabo Ocidental.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Cidade de Joanesburgo - Joanesburgo</h3>
+                        <img src="img-africa-sul/Cidade de Joanesburgo - Joanesburgo.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Cidade do Cabo - Cidade do Cabo</h3>
+                        <img src="img-africa-sul/Cidade do Cabo - Cidade do Cabo.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Garden Route - Rota ao longo da costa sul do país</h3>
+                        <img src="img-africa-sul/Garden Route - Rota ao longo da costa sul do país.png" alt="Imagem 1">
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p id="descricao-rodape"><span id="logo-rodape">RandomTrip</span> | Explore Destinos Surpreendentes</p> <br>
+                <p>Política de Privacidade | Termos de Serviço
+                Copyright © 2023 RandomTrip. Todos os direitos reservados.</p>
+            </footer>
+        
+        </section>
+    </main>
+</body>
+
+</html>

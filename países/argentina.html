@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../imagens/globo.png" type="image/x-icon">
+
+    <title>Argentina</title>
+</head>
+<style>
+
+section#boas-vindas-logo {
+    background-image: url(img-argentina/argentina.png);
+}
+
+  #caixa-1>h2 {
+    background-image: linear-gradient(to bottom, rgba(8, 162, 251, 0.61), rgb(255, 255, 255), rgba(8, 162, 251, 0.61));
+  }
+
+  #caixa-2>h2 {
+    background-image: linear-gradient(to bottom, rgba(8, 162, 251, 0.61), rgb(255, 255, 255), rgba(8, 162, 251, 0.61));
+  }
+
+  h2 {
+    background-image: linear-gradient(to bottom, rgba(8, 162, 251, 0.61), rgb(255, 255, 255), rgba(8, 162, 251, 0.61));
+  }
+
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Avança para o próximo slide a cada 3 segundos
+});
+
+</script>
+<header>
+    <nav>
+        <h1>RandomTrip</h1>
+        <a href="../index.html">home</a>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <section id="boas-vindas-logo">
+            <br>
+            <br>
+            <br>
+            <h1>Argentina</h1>
+        </section>
+
+        <div class="bandeira"><img src="../icons/argentina.png" alt="" id="bandeira-logo"></div>
+
+        <section id="informacao">
+            <div id="boas-vindas">
+                <br>
+                <h1>Boas-vindas à Argentina</h1>
+            </div>
+            <div id="caixa-lista">
+                <div id="caixa-1">
+                    <h2>Localização Geográfica</h2>
+                    <img src="../icons/localizacao.png" alt="localizacao" class="icons">
+                    <p>Sul da América do Sul, fazendo fronteira com Chile, Bolívia, Paraguai, Brasil e Uruguai.</p>
+                    <br><br><br><br><br>
+                    <h2>Geográfia</h2>
+                    <img src="../icons/geografia.png" alt="geografia" class="icons">
+                    <p>Cordilheira dos Andes, Pampas, Patagônia, Litoral.</p>
+                    <br><br><br><br><br>
+                    <h2>Pratos Típicos</h2>
+                    <img src="../icons/comida.png" alt="comida" class="icons">
+                    <p>Asado, Empanadas, Milanesa, Mate.</p>
+                    <br><br><br><br><br>
+                    <h2>Futebol</h2>
+                    <img src="../icons/bola.png" alt="bola" class="icons">
+                    <p>Paixão nacional, clubes famosos como Boca Juniors e River Plate.</p>
+
+                </div>
+                <div id="caixa-2">
+                    <h2>Dados Demográficos</h2>
+                    <img src="../icons/pessoas.png" alt="pessoas" class="icons">
+                    <p>População de aproximadamente 45 milhões de habitantes.</p>
+                    <br><br><br><br><br>
+                    <h2>Clima</h2>
+                    <img src="../icons/clima.png" alt="clima" class="icons">
+                    <p>Varia de árido no oeste a subtropical no norte.</p>
+                    <br><br><br><br><br>
+                    <h2>Setores Industriais</h2>
+                    <img src="../icons/fabrica.png" alt="fabrica" class="icons">
+                    <p>Agricultura (Soja, Carne), Indústria Automotiva.</p>
+                    <br><br><br><br><br>
+                    <h2>Sustentabilidade</h2>
+                    <img src="../icons/sustentabilidade.png" alt="sustentabilidade" class="icons">
+                    <p>Investimentos em energia solar e eólica.</p>
+                </div>
+            </div>
+
+            <h2>Pontos Turísticos</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <h3>Obelisco - Buenos Aires.</h3>
+                        <img src="img-argentina/obelisco.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Cataratas do Iguaçu - Puerto Iguazú.</h3>
+                        <img src="img-argentina/cataratas.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Glaciar Perito Moreno - El Calafate.</h3>
+                        <img src="img-argentina/glaciar.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Cerro Catedral - San Carlos de Bariloche.</h3>
+                        <img src="img-argentina/Sem título-2.png" alt="Imagem 1">
+                    </div>
+                    <div class="slide">
+                        <h3>Salinas Grandes - Jujuy e Salta.</h3>
+                        <img src="img-argentina/salinas.jpg" alt="Imagem 1">
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p id="descricao-rodape"><span id="logo-rodape">RandomTrip</span> | Explore Destinos Surpreendentes</p> <br>
+                <p>Política de Privacidade | Termos de Serviço
+                Copyright © 2023 RandomTrip. Todos os direitos reservados.</p>
+            </footer>
+        
+        </section>
+    </main>
+</body>
+
+</html>
